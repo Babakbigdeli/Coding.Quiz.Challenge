@@ -1,0 +1,20 @@
+/* tiny bit of style  */
+  
+  .navbar-container {
+    max-width: none;
+  }
+
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(236, 231, 162);
+  }
+
+
+  #start-button {
+    color: chartreuse;
+  }
+
+  p {
+      font-size: larger;
+  }
