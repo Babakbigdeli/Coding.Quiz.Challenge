@@ -29,11 +29,9 @@ const questions = [
 ];
 
 function startQuiz() {
-    //  Initialize "time remaining" variable
+
+        //  Clicking the "Start Quiz" button starts the quiz, hides the landing container, and displays the quiz container
         let timeRemained=0;
-    
-        
-    //  Clicking the "Start Quiz" button starts the quiz, hides the landing container, and displays the quiz container
         let startButtonElement = document.getElementById("start-button");
         let timeRemainedElement = document.getElementById("time-remaining");
         let finalScoreElement = document.getElementById("final-score");
@@ -71,7 +69,7 @@ function startQuiz() {
                 if (timeRemained<1) {
                     clearInterval(myInterval);
 
-                    //  hides the quiz container and pops the score container when questions are finished or time is run out
+            //  hides the quiz container and pops the score container when questions are finished or time is run out
                     quizContainerElement.setAttribute("class","container d-none");
                     finalContainerElement.setAttribute("class","container");
                     return;
@@ -128,7 +126,7 @@ function startQuiz() {
                     buttonElement.innerHTML = questions[currentQuestion-1].choices[i];
                     colEl2.append(buttonElement);
                    
-                   //  displays "coorect" or "incorect" when user clicks an answer
+                   //  displays "corect" or "incorect" when user clicks an answer
                     buttonElement.addEventListener("click",function(){
                         if (clickTimeout) {
                             return;
@@ -163,7 +161,7 @@ function startQuiz() {
                         setTimeout(function() {
                             // When an answer is chosen, pause the timer and show the result for 2 seconds before loading the next question
                             if (currentQuestion>questions.length) {
-                                // Move to the results page
+                            // Move to the results page
                                 quizContainerElement.setAttribute("class","container d-none");
                                 finalContainerElement.setAttribute("class","container");
                                 finalScoreElement.setAttribute("value",score);
@@ -234,5 +232,4 @@ function startQuiz() {
     
     
     }
-    
-startQuiz();
+    startQuiz();
